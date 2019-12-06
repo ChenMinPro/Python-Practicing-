@@ -1,0 +1,13 @@
+#提取合法的电子名称
+#  name_of_email() 
+import re
+def name_of_email(addr):
+    pattern = re.compile(r"[a-zA-Z0-9]{4-9}*@[a-zA-Z0-9]{3-5}+\.[com]")
+    result = pattern.match(addr)
+    if result:
+        print(result)
+    else:
+        return None
+
+addr = input("请输入邮箱：\n")
+print(name_of_email(addr))
