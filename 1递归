@@ -1,0 +1,17 @@
+#1.1 使用递归实现：计算某个数的阶乘
+
+def fact(n):
+    if n == 1:
+        return 1
+    return n*fact(n-1)
+
+print(fact(3))
+
+#1.2 用递归函数来实现获取斐波拉契数列中第n个数字的值
+
+def fact(n):
+    sum = int(n-1) + int(n-2)
+    print(sum)
+ #   return fact(n-2) + fact(n-1)
+
+print(fact(7))
