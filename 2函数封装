@@ -1,0 +1,48 @@
+# 2.1 封装函数实现如下要求	
+#   	 例如：输入2，5
+#     则求：2 + 22＋222 + 2222＋22222的和
+
+def sum_cube(x,y):
+    sum = 0
+    i = 0
+    m = int(y)
+    o = int(y)
+    while i < m:
+        n = int(x)*(10**int(i))*o
+        sum += n
+        i += 1
+        o -= 1
+
+    print(sum)
+
+x = input("请输入第一个数字：\n")
+y = input("请输入第二个数字：\n")
+print(sum_cube(x,y))
+
+# 2.2 判断某个数是否是素数，返回结果
+
+def prime_number(x):
+    m = int(x)
+
+    for i in range(2,m-1,1):
+        if m % i == 0:
+            if i != 1 & i != m:
+                print("{}不是素数".format(x))
+            else:
+                print("{}是素数".format(x))
+
+x = input("请输入一个数字：\n")
+
+print(prime_number(x))
+
+# 2.3 计算2-100之间素数的个数，返回结果
+
+sum += 1
+
+# 2.5 交换某两个变量的值
+def exchange(x,y):
+    x,y = y,x
+    print(x,y)
+x = input("第一个数字:\n")
+y = input("第二个数字:\n")
+print(exchange(x,y))
