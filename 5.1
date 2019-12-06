@@ -1,0 +1,17 @@
+ # 5.1 验证电子邮件字符串是否合法
+ #   要求：
+ #      1. @之前不能包含（中杠）-，及其他$&等符号，但可以包含.，开头字母和数字
+ # 	    2. 统一命名is_valid_email()
+ #      3. @之后数字或者字母
+ #      4. 后缀.com|.gov|.net任一结尾
+ import re
+def is_valid_email(addr):
+    pattern = re.compile(r"[a-zA-Z][\w\.]*@[a-zA-Z0-9]+\.[com|gov]")
+    result = pattern.match(addr)
+    if result:
+        return True
+    else:
+        return False
+
+addr = input("请输入电子邮箱:\n")
+print(is_valid_email(addr))
