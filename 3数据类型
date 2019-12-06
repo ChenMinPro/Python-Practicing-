@@ -1,0 +1,70 @@
+#3.1 将元组(1,2,3) 和集合{"four",5,6}合成一个列表
+
+tuple1 = (1, 2, 3)
+s = {"four", 5, 6}
+
+list1 = [tuple1]
+list2 = [s]
+
+list3 = list1 + list2
+
+print(list3)
+
+#3.2 将列表[3,7,0,5,1,8]中大于5元素置为0，小于5的元素置为1
+
+list1 = [3, 7, 0, 5, 1, 8]
+list2 = []
+# item = 0
+for item in list1:
+    # list1.pop(item)
+    if item > 5:
+        item = 0
+    elif item < 5:
+        item = 1
+    else:
+        item = 5
+    # list1.insert(item,list1[item])
+
+    list2.append(item)
+print(list2)
+
+#3.3 将列表["mo","deng","ge"]和[1,2,3] 转换成[("mo",1),("deng",2),("ge",3)]
+
+list1 = ["mo", "deng", "ge"]
+list2 = [1, 2, 3]
+list3 = []
+
+for i in list1:
+    for j in list2:
+        tuple1 = (i,j)
+    list3.append(tuple1)
+
+
+print(list3)
+
+#3.4 若a = dict(),令 b = a,执行b.update({"x":1}),a亦改变，为何，如何避免
+
+a = dict()
+b = a
+b.update({"x":1})
+
+print(b)
+print(a)
+
+
+#3.5 将二维结构[['a',1],['b',2]]和(('x',3),('y',4))转换成字典
+
+list1 = [['a', 1], ['b', 2]]
+tuple1 = (('x', 3), ('y', 4))
+
+dict1 = {}
+for i in list1:
+    print(i)
+    for ii in i:
+        print(ii)
+        for j in tuple1:
+            print(j)
+            for jj in j:
+                print(jj)
+                dict1[ii] = jj
+print(dict1)
