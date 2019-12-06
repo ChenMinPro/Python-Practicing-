@@ -1,0 +1,11 @@
+#封装一个删除文件函数os.remove()
+import os
+def deletefile(filename):
+    if filename:
+        os.remove(filename)
+        return True
+    else:
+        return False
+
+filename = "t1.txt"
+deletefile(filename)
